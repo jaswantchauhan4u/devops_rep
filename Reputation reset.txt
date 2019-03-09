@@ -1,5 +1,7 @@
 select * from filter where id in ('43');
 
+=======
+test
 select count(1),substring(created,1,13),filter_id from key_value_list where substring(created,1,10)='2017-12-05' group by 2 order  by 2;
 mysql -u root -pPassw0rd pmc  -e "select c_key from key_value_list where substring(created,1,10)='2017-12-05' and filter_id in ('43');" >abc.txt
 
