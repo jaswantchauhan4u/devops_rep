@@ -1,0 +1,87 @@
+select * from filter where id in ('43');
+
+test
+
+select count(1),substring(created,1,13),filter_id from key_value_list where substring(created,1,10)='2017-12-05' group by 2 order  by 2;
+mysql -u root -pPassw0rd pmc  -e "select c_key from key_value_list where substring(created,1,10)='2017-12-05' and filter_id in ('43');" >abc.txt
+
+
+
+1.)select count(1),substring(created,1,13),filter_id from key_value_list where substring(created,1,10)='2017-12-05' group by 2 order  by 2;
+
+2.) select * from filter where id in ('43'); (edited)
+
+3.) mysql -u root -pPassw0rd pmc  -e "select c_key from key_value_list where substring(created,1,10)='2017-12-05' and filter_id in ('43');" >abc.txt
+
+4.) while read line do echo $line; echo "SR|3 $line" | nc 127.0.0.1 1605; echo "SR|1 $line" | nc 127.0.0.1 1605; done<abc.txt
+
+
+In syniverse
+
+To clear reputation
+========================================================
+echo "SR|3 +132665003" | nc 127.0.0.1 1605
+========================================================
+
+to check reputation 
+========================================================
+echo "SR|1 +19178109141" | nc 127.0.0.1 1605
+========================================================
+
+echo "SR|1 +19178109141" | nc 192.168.22.6 1605
+echo "SR|1 +19178109141" | nc 192.168.22.7 1605
+
+=192.168.22.6:1605,192.168.22.7
+
+ek par local ip de diya
+aur ek main ip ...
+ye kabin se bhi run kar sakte ho
+:
+========================================================
+echo "SR|1 32665001:CFG=0,0,0" | nc 10.11.23.43 1605
+========================================================
+
+and this only can only be run from same host
+========================================================
+ echo "SR|1 +1326650040" | nc 127.0.0.1 1605
+========================================================
+
+
+
+TSM query to check reputation
+========================================================
+select event_id,event_time,subscriber_reputation,sender from messages where sender like '%326650%' and event_time>='2015-12-11' and event_time<='2015-12-18' order by event_time;
+=================
+#Acres & TA
+##################################################################
+10.11.23.43     npp05        chi-adp-npp05
+
+#Acres & TA
+##################################################################
+10.12.23.37     dalnpp03     dal-adp-npp03
+
+#TSM
+##################################################################
+10.11.23.57     npp11         chi-adp-npp11
+---------------------------------------------------------------------------------------------------
+This is in syniverse node:
+
+*/home/adaptive adaptive@dal-adp-npp03-pcf~~/scripts$ ll
+total 24
+-rwxr-xr-x 1 755 adaptive  238 Mar  6 12:21 checkreputation.sh
+-rwxr-xr-x 1 755 adaptive 7269 Mar  6 13:13 chkrept.txt
+-rwxr-xr-x 1 755 adaptive 7268 Mar  6 13:14 resetrep.txt
+-rwxr-xr-x 1 755 adaptive  238 Mar  6 12:21 resetreputation.sh
+adaptive@dal-adp-npp03-pcf~~/scripts$
+
+
+
+------------------------------------------------------------------------
+Check PMC DB 
+check NPP RAMDB
+
+Reset reputation
+
+check Mfelogs|grep - clone
+
+
